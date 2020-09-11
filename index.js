@@ -50,8 +50,10 @@ function start() {
 
 window.onload = () => {
 	var file = document.getElementById("audio_file");
+    var lbl = document.getElementById("lbl");
 	file.onchange = () => {
 		file.hidden = true;
+        lbl.style.visibility = "hidden";
 		
 		audio = new Audio();
 		audio.src = URL.createObjectURL(file.files[0]);
